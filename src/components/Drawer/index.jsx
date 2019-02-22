@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -14,6 +15,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import Assessment from '@material-ui/icons/Assessment';
 import Giftcard from '@material-ui/icons/CardGiftcard';
 import Business from '@material-ui/icons/Business';
+import Security from '@material-ui/icons/Security';
 
 import Badge from '@material-ui/core/Badge';
 
@@ -94,6 +96,13 @@ class MyDrawer extends Component {
             </ListItem>
           ))}
         </List>
+        <Divider />
+        <ListItem button component={Link} to="/Login">
+          <ListItemIcon>
+            <Security />
+          </ListItemIcon>
+          <ListItemText primary={'Login Example'} />
+        </ListItem>
       </Drawer>
     );
   }
